@@ -1,0 +1,43 @@
+name: retailgenius-churn
+
+conda_env: conda.yaml
+
+entry_points:
+  prepare:
+    command: "python -m churn.dataset"
+
+  features:
+    command: "python -m churn.features"
+
+  train:
+    parameters:
+      model: {type: string, default: rf}
+      n_estimators: {type: string, default: "300"}
+      max_depth: {type: string, default: "12"}
+      min_samples_leaf: {type: string, default: "1"}
+      learning_rate: {type: float, default: 0.1}
+      C: {type: float, default: 1.0}
+      class_weight: {type: string, default: balanced}
+      threshold: {type: float, default: 0.5}
+    command: >-
+      python -m churn.train --model {model} --n-estimators {n_estimators}
+      --max-depth {max_depth} --min-samples-leaf {min_samples_leaf}
+      --learning-rate {learning_rate} --C {C} --class-weight {class_weight}
+      --threshold {threshold}
+
+  experiments:
+    command: "python -m churn.experiments"
+
+  register:
+    parameters:
+      metric: {type: string, default: cv_pr_auc_mean}
+    command: "python -m churn.registry --metric {metric}"
+
+  explain:
+    command: "python -m churn.explain"
+
+  main:
+    command: >-
+      python -m churn.dataset && python -m churn.features &&
+      python -m churn.experiments && python -m churn.registry &&
+      python -m churn.explain

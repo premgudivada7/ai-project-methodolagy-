@@ -1,0 +1,18 @@
+{
+  "customer_id": 55168,
+  "test_position": 174,
+  "churn_probability": 0.95,
+  "actual_churn": 1,
+  "base_value_class1": 0.49975220407232185,
+  "top_reasons": [
+    "Tenure = 1.00 (+0.176)",
+    "IsNewCustomer = 1.00 (+0.164)",
+    "Complain = 1.00 (+0.104)"
+  ],
+  "global_top_features": [
+    "Tenure",
+    "IsNewCustomer",
+    "Complain",
+    "CashbackAmount"
+  ]
+}

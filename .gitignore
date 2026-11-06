@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Docs build
+docs/build/
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+
+# Generated data (re-created by `make data`) - the raw file is kept
+data/interim/*
+data/processed/*
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+
+# Office lock files
+~$*
+
+# Local leftovers
+archive.zip

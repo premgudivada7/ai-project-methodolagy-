@@ -1,0 +1,51 @@
+artifact_path: file:///Users/prem/ai-project-methodolagy-/mlruns/models/m-87075d87b3db4c76ab4b02d9ce7724e4/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.skops
+    predict_fn: predict_proba
+    python_version: 3.13.13
+  sklearn:
+    code: null
+    pickled_model: model.skops
+    serialization_format: skops
+    sklearn_version: 1.8.0
+    skops_trusted_types:
+    - numpy.dtype
+is_signature_from_type_hint: false
+mlflow_version: 3.18.0
+model_id: m-87075d87b3db4c76ab4b02d9ce7724e4
+model_size_bytes: 231671
+model_uuid: m-87075d87b3db4c76ab4b02d9ce7724e4
+prompts: null
+run_id: 410eca15d13848b5a709d9a78f41d133
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "double", "name": "Tenure", "required": false}, {"type": "double",
+    "name": "CityTier", "required": true}, {"type": "double", "name": "WarehouseToHome",
+    "required": false}, {"type": "double", "name": "HourSpendOnApp", "required": false},
+    {"type": "double", "name": "NumberOfDeviceRegistered", "required": true}, {"type":
+    "double", "name": "SatisfactionScore", "required": true}, {"type": "double", "name":
+    "NumberOfAddress", "required": true}, {"type": "double", "name": "Complain", "required":
+    true}, {"type": "double", "name": "OrderAmountHikeFromlastYear", "required": false},
+    {"type": "double", "name": "CouponUsed", "required": false}, {"type": "double",
+    "name": "OrderCount", "required": false}, {"type": "double", "name": "DaySinceLastOrder",
+    "required": false}, {"type": "double", "name": "CashbackAmount", "required": true},
+    {"type": "double", "name": "CashbackPerOrder", "required": false}, {"type": "double",
+    "name": "CouponPerOrder", "required": false}, {"type": "double", "name": "IsNewCustomer",
+    "required": false}, {"type": "string", "name": "PreferredLoginDevice", "required":
+    true}, {"type": "string", "name": "PreferredPaymentMode", "required": true}, {"type":
+    "string", "name": "PreferedOrderCat", "required": true}, {"type": "string", "name":
+    "MaritalStatus", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1,
+    2]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2026-11-06 10:56:08.395216'
